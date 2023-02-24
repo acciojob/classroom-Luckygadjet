@@ -10,20 +10,18 @@ public class studentService {
 
     @Autowired
     studentRepository repository;
-    public String addstudent(Student student) {
+    public void addstudent(Student student) {
 
         repository.addStudent(student);
-        return "Added";
     }
 
-    public String addteacher(Teacher teacher) {
+    public void addteacher(Teacher teacher) {
        repository.addTeacher(teacher);
-        return "Added";
     }
 
-    public String  addstudentteacherpair(String student, String teacher) {
+    public void  addstudentteacherpair(String student, String teacher) {
         repository.addStudent_Teacher_Pair(student,teacher);
-        return "Added";
+
     }
 
     public Student getstudentbyname(String name) {

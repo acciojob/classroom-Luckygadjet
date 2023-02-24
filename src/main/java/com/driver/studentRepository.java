@@ -20,19 +20,17 @@ public class studentRepository {
         this.teastuMap = teastuMap;
     }
 
-    public String addStudent(Student student) {
+    public void addStudent(Student student) {
         studentMap.put(student.getName(),student);
-        return "Added";
     }
 
-    public String addTeacher(Teacher teacher) {
+    public void addTeacher(Teacher teacher) {
         teacherMap.put(teacher.getName(),teacher);
-        return "Added";
     }
 
     public String addStudent_Teacher_Pair(String student, String teacher) {
 
-        if(studentMap.containsKey(student) == false || teastuMap.containsKey(teacher) == false)
+        if(studentMap.containsKey(student) == false || teacherMap.containsKey(teacher) == false)
         {
             return "Student or Teacher Data Not FOund";
         }
