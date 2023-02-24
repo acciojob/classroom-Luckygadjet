@@ -118,5 +118,8 @@ public class studentRepository {
             }
         }
 
+        teastuMap.clear();
+        teacherMap.clear();
+
     }
 }
